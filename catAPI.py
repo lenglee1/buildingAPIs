@@ -14,23 +14,23 @@ def home():
 @app.route('/category/<int:number>/', methods=['GET'])
 def category(number):
 	request_string = 'https://api.thecatapi.com/v1/images/search?category_ids=' + str(number)
-	print(request_string)
 	r = requests.get(request_string)
 	r_json = r.json()
 	categorycatImageURL = r_json[0]['url']
+	#return webbrowser.open(categorycatImageURL, new=2)
 
-	return webbrowser.open(categorycatImageURL, new=2)
-
+	return jsonify(r_json)
 
 @app.route('/filetype/<string:name>/', methods=['GET'])
 def filetype(name):
 	request_string = 'https://api.thecatapi.com/v1/images/search?mime_types=' + name
-	print(request_string)
 	r = requests.get(request_string)
 	r_json = r.json()
 	categorycatImageURL = r_json[0]['url']
+	#return webbrowser.open(categorycatImageURL, new=2)
 
-	return webbrowser.open(categorycatImageURL, new=2)
+	return jsonify(r_json)
+
 
 
 app.run()
