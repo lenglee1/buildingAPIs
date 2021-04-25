@@ -2,7 +2,10 @@
 
 1. catAPI.py
 
-Categories. 
+/category/
+
+Then choose the number you want and add it to the route.
+
 1 - cats with hats
 2 - cats in space
 3 - funny
@@ -11,7 +14,10 @@ Categories.
 6 - caturday
 7 - cats wearing ties
 
-File types available
+File types available. 
+/filetype/
+
+then choose the file type you want and add it to the route
 gif
 jpg
 png
