@@ -1,8 +1,8 @@
 # Documentation
 
-1. catAPI.py
+**1. catAPI.py**
 
-/category/
+A. /category/<insert number>
 
 Then choose the number you want and add it to the route.
 
@@ -14,10 +14,10 @@ Then choose the number you want and add it to the route.
 6 - caturday
 7 - cats wearing ties
 
-File types available. 
-/filetype/
 
-then choose the file type you want and add it to the route
+B. /filetype/<insert filetype>
+
+File types available. Choose the file type you want and add it to the route
 gif
 jpg
 png
@@ -25,7 +25,30 @@ png
 If you want any of the three: gif,jpg,png
 
 
-2. uselessfactsAPI.py
+C. For the filetype and category routes, can also choose how you want the file returned. There are three choices
+
+a. json - returns data in json format
+b. open - opens image in diff browser tab
+c. save - saved locally
+
+eg.
+/filetype/gif/open
+/category/3/json
+/category/2/save
+
+D. /category/<int:number>/transform
+
+This route will take the image and transform it. There is no choice. It will:
+
+a. blur it
+b. shade it
+c. transform color spaced
+d. spread it
+
+
+
+
+**2. uselessfactsAPI.py**
 
 a. API homepage
 http://127.0.0.1:5000
